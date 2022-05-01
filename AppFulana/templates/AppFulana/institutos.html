@@ -1,0 +1,36 @@
+{% extends "AppFulana/padre.html" %}
+{% load static %}
+{% block contenidoModificable %}
+
+<!-- banner -->
+<section class="banner_main">
+    <div class="container">
+       <div class="row d_flex">
+          <div class="col-md-6">
+             <div class="text-bg">
+                <h1>AGREGAR INSTITUTO</h1>
+                <p>  
+                    {% if miFormulario3.errors %}
+                    <p style="color:red">Los datos son erroneos, por favor revisar</p>
+                    {% endif %}
+                    <form action="" method="POST">{% csrf_token %}
+                        <table>
+                            {{ miFormulario3.as_table }}
+                        </table>
+                        <input type="submit", value="Enviar">
+                    </form>
+                </p>
+             </div>
+          </div>
+          <div class="col-md-6">
+            <div class="text-bg">
+                <h1>BUSCA INSTITUTO:</h1>
+                <p>agregar la busqueda</p>
+            </div>
+          </div>
+       </div>
+    </div>
+ </section>
+ <!-- end banner -->
+
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends "AppFulana/padre.html" %}
+{% load static %}
+{% block contenidoModificable %}
+
+<!-- banner -->
+<section class="banner_main">
+    <div class="container">
+       <div class="row d_flex">
+          <div class="col-md-5">
+             <div class="text-bg">
+                <h1>Una Fulana <br>Aprendiendo a programar</h1>
+                <span> - </span>
+                <p>Desde septiembre 2021 estoy aprendiendo a programar. La idea de armar este espacio es poner en práctica uno de los miles de consejos que me dieron. Cuál es? Explicá lo que aprendes! </p>
+                <a href="#">Empecemos</a>
+             </div>
+          </div>
+          <div class="col-md-7">
+             <div class="text-img">
+                <figure><img src='{%static "AppFulana/images/woman-5660790_960_720.webp"%}' /></figure>
+             </div>
+          </div>
+       </div>
+    </div>
+ </section>
+ <!-- end banner -->
+
+{% endblock %}

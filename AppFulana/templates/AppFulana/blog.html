@@ -1,0 +1,37 @@
+{% extends "AppFulana/padre.html" %}
+{% load static %}
+{% block contenidoModificable %}
+
+<!-- banner -->
+<section class="banner_main">
+    <div class="container">
+       <div class="row d_flex">
+          <div class="col-md-5">
+             <div class="text-bg">
+                <h1>PRIMER POST</h1>
+                <span> Aprendiendo a programar </span>
+                <p>Hola!! Cómo están? Desde septiembre 2021 estoy aprendiendo a programar. La idea de armar este espacio es poner en práctica uno de los miles de consejos que me dieron. Cuál? Explicá lo que aprendes! Es una forma de incorporar el conocimiento. Así que acá estoy, una fulana más metiéndose en este mundo que tiene mucho de elige tu propia aventura, en su nuevo capítulo. No sólo voy a tratar de explicar las cosas que aprendo, también voy a contar experiencias a modo de "blog". Seguramente como desahogo pero espero que de alguna forma, ayude en su propia aventura a les que me lean.</p>
+                <a href="#">Siguiente</a>
+             </div>
+          </div>
+          <div class="col-md-7">
+             <div class="text-img">
+                <figure><img src='{%static "AppFulana/images/woman-5660790_960_720.webp"%}' /></figure>
+             </div>
+          </div>
+       </div>
+    </div>
+ </section>
+ <!-- end banner -->
+<h1>INGRESAR NUEVO POSTEO</h1>
+{% if miFormulario.errors %}
+<p style="color:red">Los datos son erroneos, por favor revisar</p>
+{% endif %}
+<form action="" method="POST">{% csrf_token %}
+    <table>
+        {{ miFormulario.as_table }}
+    </table>
+    <input type="submit", value="Enviar">
+</form>
+
+{% endblock %}
