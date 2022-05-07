@@ -51,10 +51,10 @@ def instituto(request):
 	return render(request, "AppFulana/institutos.html",{"miFormulario3":miFormulario3})
 
 def buscar(request):
-	if request.GET['lenguaje']:
-		lenguaje = request.GET['lenguaje']
-		review = Lenguaje.objects.filter(lenguaje__icontains=lenguaje)
-		return render (request, "AppFulana/buscar.html", {"lenguaje":lenguaje, "review":review})
+	if request.GET["lenguajeBuscado"]:
+		lenguaje = request.GET['lenguajeBuscado']
+		review = Lenguaje.objects.filter(lenguaje__iexact=lenguaje)
+		return render(request, "AppFulana/buscar.html", {"lenguajeBuscado":lenguaje, "review":review})
 	else:
 		respuesta = "no enviaste datos"
 

@@ -8,18 +8,18 @@
        <div class="row d_flex">
           <div class="col-md-12">
              <div class="text-bg">
-                <span> Resultado de busqueda de {{lenguaje}}</span>
+                <span> Resultado de busqueda de {{lenguajeBuscado}}</span>
                 <p>
-                     {% if lenguaje %}
+                  {% if review %}
 
-                     <ul>
-                     {% for lenguaje in lenguaje %}
-                        <li>{{lenguaje.lenguaje}}</li>
-                        <li>{{lenguaje.review}}</li> 
-                     {% endfor %}
-                     </ul>
+                  <ul>
+                  {% for x in review %}
+                     <li>{{x.lenguaje}}</li>
+                     <li>{{x.review}}</li> 
+                  {% endfor %}
+                  </ul>
 
-                     {% endif %}
+                  {% endif %}
 
                 </p>
              </div>
